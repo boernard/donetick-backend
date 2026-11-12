@@ -54,7 +54,7 @@ jobs:
               LAST_RELEASE_DATE=$(git log -1 --format=%aI "$LAST_RELEASE")
             fi
             echo "Last release date: $LAST_RELEASE_DATE"
-            FRONTEND_NEW=$(gh api "repos/donetick/frontend/commits?sha=main&since=${LAST_RELEASE_DATE}&per_page=1" --jq 'length')
+            FRONTEND_NEW=$(gh api "repos/boernard/donetick-frontend/commits?sha=main&since=${LAST_RELEASE_DATE}&per_page=1" --jq 'length')
             echo "New frontend commits since ${LAST_RELEASE}: ${FRONTEND_NEW}"
           fi
 
